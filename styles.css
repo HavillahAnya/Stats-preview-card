@@ -1,0 +1,124 @@
+/* Colors */
+#root {
+    --Very-dark-blue: hsl(233, 47%, 7%); /*(main background)*/
+    --Dark-desaturated-blue: hsl(244, 38%, 16%); /*(card background)*/
+    --Soft-violet: hsl(277, 64%, 61%); /*(accent)*/
+}
+
+/* CSS Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  max-width: 1200px;
+  min-height: 500px;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.text-box {
+  padding: 30px 50px;
+  background-color: hsl(244, 38%, 16%);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.text-box .main-header {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.text-box .main-header .header-spec {
+  color: hsl(277, 64%, 61%);
+}
+
+.text-box .lead {
+  margin-bottom: 8rem;
+  opacity: 0.7;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .feature .feature-main {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.features .feature .feature-sub {
+  display: block;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.img-box {
+  background-image: 
+  linear-gradient(to right, hsla(277, 64%, 61%, 0.500), hsla(277, 64%, 61%, 0.500)),
+  url("./images/image-header-desktop.jpg");
+  background-size: cover;
+  background-position: bottom;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 80px 0;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    min-height: 100vw;
+  }
+
+  .text-box {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+  }
+
+  .text-box .lead {
+    margin-bottom: 2rem;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .features .feature {
+    margin-bottom: 20px;
+  }
+
+  .img-box {
+    order: -1;
+    background-image:
+    linear-gradient(to right, hsla(277, 64%, 61%, 0.500), hsla(277, 64%, 61%, 0.500)),
+     url('./images/image-header-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
